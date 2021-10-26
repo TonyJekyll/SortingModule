@@ -1,18 +1,9 @@
-G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/comparator.v {1 {vlog -work work -stats=none G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/comparator.v
+{G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/sequence generator.v} {1 {vlog -work work -stats=none {G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/sequence generator.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module comparator
--- Compiling module decoder
+-- Compiling module sequence_generator
 
 Top level modules:
-	comparator
-	decoder
-
-} {} {}} G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/testbench.v {1 {vlog -work work -stats=none G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/testbench.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module testbench
-
-Top level modules:
-	testbench
+	sequence_generator
 
 } {} {}} G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v {1 {vlog -work work -stats=none G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -20,5 +11,14 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	top_module
+
+} {} {}} G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/comparator.v {1 {vlog -work work -stats=none {G:\ANTON\_prog\fpga_projects\modelsim\SortingModuleTest\comparator.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module comparator
+-- Compiling module decoder
+
+Top level modules:
+	comparator
+	decoder
 
 } {} {}}

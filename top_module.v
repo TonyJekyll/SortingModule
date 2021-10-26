@@ -37,7 +37,7 @@ module top_module #(
     );
 
 	reg [DATA_WIDTH - 1 : 0] inner_buffer [0 : 2**ADR_WIDTH - 1]; // inner buffer for write input stream, sorting und read to output stream
-	reg [ADR_WIDTH - 1 : 0] words_counter; // reverse counter for words. On recieve mode increase output, on tramnsmit - decrease
+	reg [ADR_WIDTH : 0] words_counter; // reverse counter for words. On recieve mode increase output, on tramnsmit - decrease
 	reg [ADR_WIDTH : 0] words_count; // count of recieved words
 	reg [ADR_WIDTH : 0] cycle_counter1;
 	reg [ADR_WIDTH : 0] cycle_counter2; // need only for Callkhose realization
@@ -89,7 +89,7 @@ module top_module #(
 			comparator #(
 				.DATA_WIDTH(DATA_WIDTH)
 				) comparators (
-					.oen(oen_for_comparators[i - 1]),
+					.oen((i > words_count - 1) ? 1'b0 : oen_for_comparators[i - 1]),
 					.comp_in_word_A(inner_buffer[i - 1]),
 					.comp_in_word_B(inner_buffer[i]),
 					.comp_out_word_A(outputs_comps_A[i - 1]),
@@ -145,8 +145,14 @@ module top_module #(
 		for (j = 0; j < 2**ADR_WIDTH; j = j + 1)
 		begin:update_buffer
 			always @(posedge clk_i) begin
-				if (current_state == ONW && cycle_counter1 != 0) begin
-					inner_buffer[j] <= data_sorted[j];
+				if (async_rst_i) begin
+					inner_buffer[j] <= 0;
+					data_sorted[j] <= 0;
+				end 
+				else if (clk_i) begin
+					if (current_state == ONW && cycle_counter1 != 0) begin
+						inner_buffer[j] <= data_sorted[j];
+					end
 				end
 			end
 		end
@@ -170,74 +176,32 @@ module top_module #(
 						inner_buffer[0] <= data_i;
 						words_counter <= 1;
 					end
-					current_state <= ONSR;
-				end
-			end
-			ONSR : begin
-				if (!sop_i) begin
-					if (!eop_i) begin                                   // double coding!
-						if (val_i) begin // ignore invalid input data
-							inner_buffer[words_counter] <= data_i;
-							words_counter <= words_counter + 1;
-						end
+					if (eop_i) begin
+						current_state <= ONST;
+						words_count <= 1'b1;
+						busy_o_r <= 1'b1;
+					end else begin
 						current_state <= ONR;
 					end
-					else begin
-						if (val_i) begin // ignore invalid input data
-							inner_buffer[words_counter] <= data_i;
-							words_count <= words_counter;
-						end
-						current_state <= ONER;
-					end                                    // double coding!
-				end
-				else begin
-					// place for handle of exception (two sop_i signals)
 				end
 			end
 			ONR : begin
-				if (!eop_i) begin                                   // double coding, but decrease number of elements of combinational logic
-					if (val_i) begin
-						inner_buffer[words_counter] <= data_i;
-						words_counter <= words_counter + 1;
-					end
+
+				if (val_i) begin
+					inner_buffer[words_counter] <= data_i;
+					words_counter <= words_counter + 1;
 				end
-				else begin
-					if (val_i) begin
-						inner_buffer[words_counter] <= data_i;
-						words_count <= words_counter;
-					end
-					current_state <= ONER;
-				end                                   // double coding!
-			end
-			ONER : begin
-				busy_o_r <= 1'b1;
-				current_state <= ONW;
-				cycle_counter1 <= 1;
-				cycle_counter2 <= 0;
-				cycle_counter_direction <= 1;
+
+				if (eop_i) begin
+					busy_o_r <= 1'b1;
+					cycle_counter1 <= 1;
+					cycle_counter_direction <= 1;
+					current_state <= ONW;
+					words_count <= words_counter + 1;
+				end
+				
 			end
 			ONW : begin
-				//// bubble sort. Callkhose realization ////
-				/* Why poor? It needs for (N^2-N)/2 cycles with N = number of words
-				if (cycle_counter1 <= words_count) begin
-					if (cycle_counter2 <= words_count - cycle_counter1) begin
-						if (inner_buffer[cycle_counter2] > inner_buffer[cycle_counter2 + 1]) begin
-							
-							inner_buffer[cycle_counter2] <= inner_buffer[cycle_counter2 + 1];
-							inner_buffer[cycle_counter2 + 1] <= inner_buffer[cycle_counter2];
-
-						end
-						cycle_counter2 <= cycle_counter2 + 1;
-					end
-					else begin
-						cycle_counter1 <= cycle_counter1 + 1;
-						cycle_counter2 <= 0;
-					end
-				end
-				else begin
-					current_state <= ONST;
-				end*/
-
 				// More efficient realization of bubble sort. For hardware realization need 2*N-3 cycles with N = number of words
 				if (cycle_counter_direction) begin
 					if (cycle_counter1 < words_count) begin	
@@ -262,22 +226,30 @@ module top_module #(
 				sop_o_r <= 1'b1;
 				val_o_r <= 1'b1; // all data is valid! Maybe in last create another clk for output interface
 				data_o_r <= inner_buffer[words_count - words_counter];
-				words_counter <= words_counter - 1'b1;
-				current_state <= ONT;
+				inner_buffer[words_count - words_counter] <= 0;
+				if (words_counter > 1'b1) begin
+					words_counter <= words_counter - 1'b1;
+					current_state <= ONT;
+				end
+				else begin
+					eop_o_r <= 1'b1;
+					current_state <= ONET;
+				end
 			end
 			ONT : begin
 				sop_o_r <= 1'b0;
 				data_o_r <= inner_buffer[words_count - words_counter];
-				if (words_counter == 1'b0) begin
-					eop_o_r <= 1'b1;
-					current_state <= ONET;
+				if (words_counter > 1'b1) begin
+					words_counter <= words_counter - 1'b1;
 				end
 				else begin
-					words_counter <= words_counter - 1'b1;
+					eop_o_r <= 1'b1;
+					current_state <= ONET;
 				end
 			end
 			ONET : begin
 				val_o_r <= 1'b0;
+				sop_o_r <= 1'b0;
 				eop_o_r <= 1'b0;
 				busy_o_r <= 1'b0;
 				data_o_r <= 0;
