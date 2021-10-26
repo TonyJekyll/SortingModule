@@ -39,6 +39,20 @@ module testbench;
 	wire val_o;
 	wire busy_o;
 
+	sequence_generator #(
+    	.NUM_WORDS(8)
+	) sequence_generator (
+    	.clk 		(clk_i),
+    	.reset_n 	(~async_rst_i),
+
+    	.in_busy 	(busy_o),
+
+    	.out_data 	(out_data),
+    	.out_valid 	(out_valid),
+    	.out_sop 	(out_sop),
+    	.out_eop 	(out_eop)
+	);
+
 	// Instantiate the Unit Under Test (UUT)
 	top_module # (
 		.DATA_WIDTH(8),
@@ -97,7 +111,32 @@ module testbench;
 		data_i = 8'h00;
 		eop_i = 0;
         val_i = 0;
-		// Add stimulus here
+		
+		// One byte
+		#540
+		sop_i = 1;
+		eop_i = 1;
+		data_i = 8'hFF;
+		val_i = 1;
+		#10 
+		data_i = 8'h00;
+		sop_i = 0;
+		eop_i = 0;
+        val_i = 0;
+
+        // Two bytes
+        #40
+		sop_i = 1;
+		data_i = 8'hFF;
+		val_i = 1;
+		#10 
+		sop_i = 0;
+		eop_i = 1;
+		data_i = 8'hAA;
+		#10
+		eop_i = 0;
+        val_i = 0;
+        data_i = 0;
 
 	end
       

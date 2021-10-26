@@ -1,0 +1,322 @@
+# Compile of comparator.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top_module.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.comparator work.decoder work.testbench work.top_module -t ns
+# vsim work.comparator work.decoder work.testbench work.top_module -t ns 
+# Start time: 20:33:07 on Oct 26,2021
+# Loading work.comparator
+# Loading work.decoder
+# Loading work.testbench
+# Loading work.top_module
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+add wave -position end  sim:/testbench/clk_i
+add wave -position end  sim:/testbench/async_rst_i
+add wave -position end  sim:/testbench/sop_i
+add wave -position end  sim:/testbench/eop_i
+add wave -position end  sim:/testbench/data_i
+add wave -position end  sim:/testbench/val_i
+add wave -position end  sim:/testbench/sop_o
+add wave -position end  sim:/testbench/eop_o
+add wave -position end  sim:/testbench/data_o
+add wave -position end  sim:/testbench/val_o
+add wave -position end  sim:/testbench/busy_o
+run
+# Compile of comparator.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top_module.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.comparator
+# Loading work.decoder
+# Loading work.testbench
+# Loading work.top_module
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
+run
+# Compile of comparator.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top_module.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.comparator
+# Loading work.decoder
+# Loading work.testbench
+# Loading work.top_module
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
+quit -sim
+# End time: 20:37:34 on Oct 26,2021, Elapsed time: 0:04:27
+# Errors: 0, Warnings: 3
+vsim work.comparator work.decoder work.testbench work.top_module -t ns
+# vsim work.comparator work.decoder work.testbench work.top_module -t ns 
+# Start time: 20:37:37 on Oct 26,2021
+# Loading work.comparator
+# Loading work.decoder
+# Loading work.testbench
+# Loading work.top_module
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+add wave -position end  sim:/testbench/clk_i
+add wave -position end  sim:/testbench/async_rst_i
+add wave -position end  sim:/testbench/sop_i
+add wave -position end  sim:/testbench/eop_i
+add wave -position end  sim:/testbench/data_i
+add wave -position end  sim:/testbench/val_i
+add wave -position end  sim:/testbench/sop_o
+add wave -position end  sim:/testbench/eop_o
+add wave -position end  sim:/testbench/data_o
+add wave -position end  sim:/testbench/val_o
+add wave -position end  sim:/testbench/busy_o
+run
+add wave -position end  sim:/testbench/uut/data_sorted
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
+add wave -position end  sim:/testbench/uut/inner_buffer
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# Compile of comparator.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top_module.v was successful.
+# 3 compiles, 0 failed with no errors.
+run
+# Compile of comparator.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top_module.v failed with 2 errors.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of comparator.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top_module.v failed with 2 errors.
+# 3 compiles, 1 failed with 2 errors.
+# WARNING: No extended dataflow license exists
+# Compile of comparator.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top_module.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.comparator
+# Loading work.decoder
+# Loading work.testbench
+# Loading work.top_module
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
+# Compile of comparator.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top_module.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.comparator
+# Loading work.decoder
+# Loading work.testbench
+# Loading work.top_module
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
+# Compile of comparator.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top_module.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.comparator
+# Loading work.decoder
+# Loading work.testbench
+# Loading work.top_module
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
+# Compile of comparator.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top_module.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.comparator
+# Loading work.decoder
+# Loading work.testbench
+# Loading work.top_module
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
+# Compile of comparator.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top_module.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.comparator
+# Loading work.decoder
+# Loading work.testbench
+# Loading work.top_module
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
+# Compile of comparator.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top_module.v was successful.
+# Compile of sequence generator.v was successful.
+# 4 compiles, 0 failed with no errors.
+# can't read "Startup(-L)": no such element in array
+# Load canceled
+quit -sim
+# End time: 21:19:34 on Oct 26,2021, Elapsed time: 0:41:57
+# Errors: 0, Warnings: 6
+# can't read "Startup(-L)": no such element in array
+# Load canceled
+vsim work.comparator work.decoder work.testbench work.top_module -t ns
+# vsim work.comparator work.decoder work.testbench work.top_module -t ns 
+# Start time: 21:19:45 on Oct 26,2021
+# Loading work.comparator
+# Loading work.decoder
+# Loading work.testbench
+# Loading work.top_module
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# Compile of comparator.v was successful.
+# Compile of testbench.v was successful.
+# Compile of top_module.v was successful.
+# Compile of sequence generator.v was successful.
+# 4 compiles, 0 failed with no errors.
+quit -sim
+# End time: 21:21:08 on Oct 26,2021, Elapsed time: 0:01:23
+# Errors: 0, Warnings: 4
+vsim work.comparator work.decoder work.testbench work.top_module -t ns
+# vsim work.comparator work.decoder work.testbench work.top_module -t ns 
+# Start time: 21:21:11 on Oct 26,2021
+# Loading work.comparator
+# Loading work.decoder
+# Loading work.testbench
+# Loading work.sequence_generator
+# Loading work.top_module
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'out_data'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/sequence generator.v(19).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/sequence_generator File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/testbench.v Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ns  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+quit -sim
+# End time: 21:21:33 on Oct 26,2021, Elapsed time: 0:00:22
+# Errors: 0, Warnings: 4
+vsim work.comparator work.decoder work.sequence_generator work.testbench work.top_module
+# vsim work.comparator work.decoder work.sequence_generator work.testbench work.top_module 
+# Start time: 21:22:01 on Oct 26,2021
+# Loading work.comparator
+# Loading work.decoder
+# Loading work.sequence_generator
+# Loading work.testbench
+# Loading work.top_module
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'out_data'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/sequence generator.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sequence_generator File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/testbench.v Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+add wave -position end sim:/testbench/uut/*
+add wave -position end sim:/testbench/sequence_generator/*
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'out_data'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/sequence generator.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sequence_generator File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/testbench.v Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
+add wave -position 0  sim:/testbench/clk_i
+add wave -position 1  sim:/testbench/async_rst_i
+add wave -position 2  sim:/testbench/sop_i
+add wave -position 3  sim:/testbench/eop_i
+add wave -position 4  sim:/testbench/data_i
+add wave -position 5  sim:/testbench/val_i
+add wave -position 6  sim:/testbench/sop_o
+add wave -position 7  sim:/testbench/eop_o
+add wave -position 8  sim:/testbench/data_o
+add wave -position 9  sim:/testbench/val_o
+add wave -position 10  sim:/testbench/busy_o
+add wave -position 11  sim:/testbench/out_data
+add wave -position 12  sim:/testbench/out_valid
+add wave -position 13  sim:/testbench/out_sop
+add wave -position 14  sim:/testbench/out_eop
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'out_data'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/sequence generator.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/sequence_generator File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/testbench.v Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (4) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/uut/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'decoder_i'. The port definition is at: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v(39).
+#    Time: 0 ps  Iteration: 0  Instance: /top_module/decoder_instance File: G:/ANTON/_prog/fpga_projects/modelsim/SortingModuleTest/top_module.v Line: 79
+run
